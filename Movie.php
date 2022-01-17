@@ -19,10 +19,9 @@ class Movie {
 
   //metodi
   public function getParentControl(){
-    $control = '';
-    if($this->genre = 'Horror'){
-      $control = 'Genere non adatto ad un pubblico minorenne';
-    }return $control;
+    if($this->genre === 'Horror'){
+      $this->genre = 'Horror --> Genere non adatto ad un pubblico minorenne!';
+    }return $this->genre;
   }
 
 }
