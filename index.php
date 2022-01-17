@@ -3,10 +3,10 @@
   require_once __DIR__.'/Movie.php';
 
   //inserisco le proprietà di base presenti nel costruttore
-  $film1 = new Movie('Otto e mezzo', 'Federico Fellini', 1963);
+  $film1 = new Movie('Otto e mezzo', 'Federico Fellini', 1963, 'Drama/Fantasy');
 
   //aggiungo una proprietà senza utilizzare il costruttore
-  $film1->genre = 'Drama/Fantasy';
+  $film1->dop = 'Tonino Delli Colli';
 
   // $film2 = new Movie();
   // $film2->title = 'Stalker';
@@ -48,7 +48,13 @@
       <h2>Genre:</h2>
       <li>
         <h4>
-          <?php echo $film1->getChildrenControl(); ?>
+          <?php echo $film1->getParentControl(); ?>
+        </h4>
+      </li>
+      <h2>Director Of Photography:</h2>
+      <li>
+        <h4>
+          <?php echo $film1->dop; ?>
         </h4>
       </li>
     </ul>
