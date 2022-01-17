@@ -5,11 +5,15 @@
 }
 
 .film{
-  padding: 20px;
-  border: 1px solid black;
+  padding: 25px;
+  border-bottom: 1px solid black;
   
 }
 
 .film h2{
   font-family: 'Courier New', Courier, monospace;
+}
+
+ul li{
+  padding: 5px;
 }

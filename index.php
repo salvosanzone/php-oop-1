@@ -2,6 +2,9 @@
   //richiamo il file Movie.php
   require_once __DIR__.'/Movie.php';
 
+  //richiamo il file database.php
+  require_once __DIR__.'/database.php';
+
   //inserisco le proprietà di base presenti nel costruttore
   $film1 = new Movie('Otto e mezzo', 'Federico Fellini', 1963, 'Drama/Fantasy');
 
@@ -12,7 +15,7 @@
   $film2->dop = 'Aleksandr Kniažinskij';
 
   $film3 = new Movie("L'inquilino del terzo piano", 'Roman Polański', 1976, 'Horror');
-  $film2->dop = 'Sven Nykvist';
+  $film3->dop = 'Sven Nykvist';
   
 ?>
 
@@ -137,6 +140,46 @@
     </ul>
   </div> 
 <!-- /FILM -->
+
+<!-- CICLO -->
+<div class="film">
+    <ul>
+      <?php foreach($films as $film) : 
+        $film = new Movie($film['title'], $film['director'], $film['year'], $film['genre'])
+      ?>
+      <h2>Title of Movie:</h2>
+      <li>
+        <h4>
+          <?php echo $film->title; ?>
+        </h4>
+      </li>
+      <h2>Director:</h2>  
+      <li>
+        <h4>
+          <?php echo $film3->director; ?>
+        </h4>
+      </li>
+      <h2>Year:</h2>  
+      <li>
+        <h4>
+          <?php echo $film3->year; ?>
+        </h4>
+      </li>
+      <h2>Genre:</h2>
+      <li>
+        <h4>
+          <?php echo $film3->getParentControl(); ?>
+        </h4>
+      </li>
+      <h2>Director Of Photography:</h2>
+      <li>
+        <h4>
+          <?php echo $film3->dop; ?>
+        </h4>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+  </div> 
 
 </body>
 </html>
