@@ -8,11 +8,11 @@
   //aggiungo una proprietà senza utilizzare il costruttore
   $film1->dop = 'Tonino Delli Colli';
 
-  //inserisco le proprietà di base presenti nel costruttore
   $film2 = new Movie('Stalker', 'Andrej Tarkovskij', 1979, 'Sci-fi');
-
-  //aggiungo una proprietà senza utilizzare il costruttore
   $film2->dop = 'Aleksandr Kniažinskij';
+
+  $film3 = new Movie("L'inquilino del terzo piano", 'Roman Polański', 1976, 'Horror');
+  $film2->dop = 'Sven Nykvist';
   
 ?>
 
@@ -95,6 +95,43 @@
       <li>
         <h4>
           <?php echo $film2->dop; ?>
+        </h4>
+      </li>
+    </ul>
+  </div> 
+<!-- /FILM -->
+
+<!-- FILM -->
+  <div class="film">
+    <ul>
+      <h2>Title of Movie:</h2>
+      <li>
+        <h4>
+          <?php echo $film3->title; ?>
+        </h4>
+      </li>
+      <h2>Director:</h2>  
+      <li>
+        <h4>
+          <?php echo $film3->director; ?>
+        </h4>
+      </li>
+      <h2>Year:</h2>  
+      <li>
+        <h4>
+          <?php echo $film3->year; ?>
+        </h4>
+      </li>
+      <h2>Genre:</h2>
+      <li>
+        <h4>
+          <?php echo $film3->getParentControl(); ?>
+        </h4>
+      </li>
+      <h2>Director Of Photography:</h2>
+      <li>
+        <h4>
+          <?php echo $film3->dop; ?>
         </h4>
       </li>
     </ul>
