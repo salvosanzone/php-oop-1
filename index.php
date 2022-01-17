@@ -145,7 +145,7 @@
 <div class="film">
     <ul>
       <?php foreach($films as $film) : 
-        $film = new Movie($film['title'], $film['director'], $film['year'], $film['genre'])
+        $film = new Movie($film['title'], $film['director'], $film['year'], $film['genre']);
       ?>
       <h2>Title of Movie:</h2>
       <li>
@@ -156,25 +156,19 @@
       <h2>Director:</h2>  
       <li>
         <h4>
-          <?php echo $film3->director; ?>
+          <?php echo $film->director; ?>
         </h4>
       </li>
       <h2>Year:</h2>  
       <li>
         <h4>
-          <?php echo $film3->year; ?>
+          <?php echo $film->year; ?>
         </h4>
       </li>
       <h2>Genre:</h2>
       <li>
         <h4>
-          <?php echo $film3->getParentControl(); ?>
-        </h4>
-      </li>
-      <h2>Director Of Photography:</h2>
-      <li>
-        <h4>
-          <?php echo $film3->dop; ?>
+          <?php echo $film->genre; ?>
         </h4>
       </li>
       <?php endforeach; ?>

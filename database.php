@@ -1,3 +1,5 @@
+<?php
+
 $films = [
   [
     'title' => 'Arancia Meccanica',
@@ -12,3 +14,5 @@ $films = [
     'genre' => 'Noir'
     ],
   ];
+
+?>
